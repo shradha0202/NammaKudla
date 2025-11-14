@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Admin Panel - Namma Kudla</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header>
+    <nav class="navbar">
+      <h1 class="logo">Admin Panel</h1>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+          <li><a href="blog.html">Blog</a></li>
+          <li><a href="destinations.html">Destinations</a></li>
+          <li><a href="guide.html">Guide Profile</a></li>
+          <li><a href="guides.html"> Travel Guide</a></li>
+           <li><a href="search.html">Search & Filter </a></li>
+          <li><a href="stories.html"> Travel Stories</a></li>
+          <li><a href="engage.html">Engage with Readers</a></li>
+          <li><a href="dashboard.html">Dashboard Overview</a></li>
+          <li><a href="admin.html">User Management</a></li>
+          <li><a href="content.html">Content Mangement</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main class="admin-container section">
+    <h1 class="admin-title">Admin Dashboard</h1>
+    <div class="admin-grid">
+      <!-- User Management -->
+      <section class="card admin-card user-management" aria-labelledby="users-title">
+        <h2 id="users-title">User Management</h2>
+        <form id="user-form" class="admin-form" aria-label="Add user">
+          <div class="form-row">
+            <input id="u-name" name="name" type="text" placeholder="Name" required />
+            <select id="u-role" name="role" required>
+              <option value="">Select Role</option>
+              <option value="Visitor">Visitor</option>
+              <option value="Blogger">Blogger</option>
+              <option value="Guide">Guide</option>
+            </select>
+          </div>
+          <div class="form-row">
+            <input id="u-email" name="email" type="email" placeholder="Email" required />
+            <button type="submit" class="btn-primary">Add User</button>
+          </div>
+        </form>
+
+        <div class="table-wrap">
+          <table class="admin-table user-table">
+            <thead>
+              <tr>
+                <th>Name</th>
+                <th>Role</th>
+                <th>Email</th>
+                <th>Actions</th>
+              </tr>
+            </thead>
+            <tbody id="user-list">
+              <!-- Users will be dynamically inserted here -->
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      <!-- Content Management -->
+      <section class="card admin-card content-management" aria-labelledby="content-title">
+        <h2 id="content-title">Content Management</h2>
+        <form id="post-form" class="admin-form" aria-label="Add post">
+          <div class="form-row">
+            <input id="post-title" name="title" type="text" placeholder="Post Title" required />
+          </div>
+          <div class="form-row">
+            <textarea id="post-content" name="content" placeholder="Post Content" rows="4" required></textarea>
+          </div>
+          <div class="form-row">
+            <select id="post-category" name="category" required>
+              <option value="">Category</option>
+              <option value="Beaches">Beaches</option>
+              <option value="Temples">Temples</option>
+              <option value="Food">Food</option>
+              <option value="Culture">Culture</option>
+            </select>
+            <button type="submit" class="btn-primary">Add Post</button>
+          </div>
+        </form>
+
+        <div class="table-wrap">
+          <table class="admin-table post-table">
+            <thead>
+              <tr>
+                <th>Title</th>
+                <th>Category</th>
+                <th>Actions</th>
+              </tr>
+            </thead>
+            <tbody id="post-list">
+              <!-- Posts will be dynamically inserted here -->
+            </tbody>
+          </table>
+        </div>
+      </section>
+    </div>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Namma Kudla. Admin Panel</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

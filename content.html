@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Content Management - Namma Kudla</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <!-- Header -->
+  <header>
+    <nav class="navbar">
+      <h1 class="logo">Content Management</h1>
+      <ul class="nav-links">
+         <li><a href="index.html">Home</a></li>
+          <li><a href="blog.html">Blog</a></li>
+          <li><a href="destinations.html">Destinations</a></li>
+          <li><a href="guide.html">Guide Profile</a></li>
+          <li><a href="guides.html"> Travel Guide</a></li>
+           <li><a href="search.html">Search & Filter </a></li>
+          <li><a href="stories.html"> Travel Stories</a></li>
+          <li><a href="engage.html">Engage with Readers</a></li>
+          <li><a href="dashboard.html">Dashboard Overview</a></li>
+          <li><a href="admin.html">User Management</a></li>
+          <li><a href="content.html">Content Mangement</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Content Management Section -->
+  <main class="content-panel section" aria-labelledby="content-manage">
+    <h2 id="content-manage">Manage Blog Posts & Articles</h2>
+
+    <div class="content-grid">
+      <!-- Add New Post -->
+      <section class="card content-card">
+        <h3>Add New Post</h3>
+        <form id="add-post-form" class="content-form" aria-label="Add new post">
+          <label class="sr-only" for="post-title">Post title</label>
+          <input id="post-title" name="title" type="text" placeholder="Post Title" required />
+
+          <label class="sr-only" for="post-content">Post content</label>
+          <textarea id="post-content" name="content" placeholder="Post Content" rows="5" required></textarea>
+
+          <label class="sr-only" for="post-category">Category</label>
+          <select id="post-category" name="category" required>
+            <option value="">Select Category</option>
+            <option value="Beaches">Beaches</option>
+            <option value="Temples">Temples</option>
+            <option value="Food">Food</option>
+            <option value="Culture">Culture</option>
+            <option value="Nature">Nature</option>
+          </select>
+
+          <div class="form-actions">
+            <button type="submit" class="btn-primary">Add Post</button>
+          </div>
+        </form>
+      </section>
+
+      <!-- Posts Table -->
+      <section class="card content-card">
+        <h3>Existing Posts</h3>
+        <div class="table-wrap">
+          <table class="admin-table content-table">
+            <thead>
+              <tr>
+                <th>Title</th>
+                <th>Category</th>
+                <th>Actions</th>
+              </tr>
+            </thead>
+            <tbody id="post-list">
+              <!-- Posts will be dynamically inserted here -->
+              <tr>
+                <td>Sunset at Panambur Beach</td>
+                <td>Beaches</td>
+                <td class="admin-actions">
+                  <button class="btn-edit">Edit</button>
+                  <button class="btn-delete">Delete</button>
+                </td>
+              </tr>
+              <tr>
+                <td>Top 5 Street Foods in Kudla</td>
+                <td>Food</td>
+                <td class="admin-actions">
+                  <button class="btn-edit">Edit</button>
+                  <button class="btn-delete">Delete</button>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2025 Namma Kudla. Admin Panel</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

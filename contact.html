@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contact Us - Namma Kudla</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <!-- Header -->
+  <header>
+    <nav class="navbar">
+      <h1 class="logo">Namma Kudla</h1>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+          <li><a href="blog.html">Blog</a></li>
+          <li><a href="destinations.html">Destinations</a></li>
+          <li><a href="guide.html">Guide Profile</a></li>
+          <li><a href="guides.html"> Travel Guide</a></li>
+           <li><a href="search.html">Search & Filter </a></li>
+          <li><a href="stories.html"> Travel Stories</a></li>
+          <li><a href="engage.html">Engage with Readers</a></li>
+          <li><a href="dashboard.html">Dashboard Overview</a></li>
+          <li><a href="admin.html">User Management</a></li>
+          <li><a href="content.html">Content Mangement</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="contact.html">Contact</a></li>
+          
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Contact Section -->
+  <main class="section contact-section" id="contact">
+    <div class="section-intro" style="text-align:center;max-width:820px;margin:0 auto 1rem">
+      <h2>Get in Touch</h2>
+      <p>Have a question, suggestion, or just want to say hello? We'd love to hear from you — reach out and we'll get back to you soon.</p>
+    </div>
+
+    <div class="contact-grid">
+      <!-- Contact Form Column -->
+      <section class="card contact-card">
+        <h3>Send us a message</h3>
+        <form id="contact-form" class="contact-form" novalidate>
+          <label class="sr-only" for="contact-name">Your name</label>
+          <input id="contact-name" name="name" type="text" placeholder="Your name" required />
+
+          <label class="sr-only" for="contact-email">Your email</label>
+          <input id="contact-email" name="email" type="email" placeholder="Your email" required />
+
+          <label class="sr-only" for="contact-subject">Subject</label>
+          <input id="contact-subject" name="subject" type="text" placeholder="Subject (optional)" />
+
+          <label class="sr-only" for="contact-body">Message</label>
+          <textarea id="contact-body" name="message" rows="6" placeholder="Write your message here..." required></textarea>
+
+          <div class="form-actions">
+            <button class="btn-primary" type="submit">Send Message</button>
+          </div>
+        </form>
+
+    <!-- Inline status message (success / error) -->
+    <div id="contact-status" class="contact-message" role="status" aria-live="polite" hidden></div>
+      </section>
+
+      <!-- Info & Map Column -->
+      <aside>
+        <div class="card contact-info-card">
+          <h3>Contact details</h3>
+          <ul class="info-list">
+            <li><strong>Email:</strong> <a href="mailto:hello@nammakudla.com">hello@nammakudla.com</a></li>
+            <li><strong>Phone:</strong> <a href="tel:+919876543210">+91 98765 43210</a></li>
+            <li><strong>Address:</strong> Hampankatta, Mangalore, Karnataka, India</li>
+          </ul>
+
+          <div style="margin-top:0.6rem">
+            <h4 style="margin:0 0 0.5rem">Follow us</h4>
+            <div class="social-share">
+              <a class="share-btn" href="#">Instagram</a>
+              <a class="share-btn" href="#">Facebook</a>
+              <a class="share-btn" href="#">YouTube</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="card map-card" style="margin-top:1rem">
+          <h4 style="margin-top:0">Find us</h4>
+          <div class="map-container" aria-hidden="false">
+           
+          </div>
+        </div>
+      </aside>
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2025 Namma Kudla. All rights reserved.</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

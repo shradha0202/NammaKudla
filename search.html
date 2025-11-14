@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Namma Kudla - Search & Filter</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <!-- Header -->
+  <header>
+    <nav class="navbar">
+      <h1 class="logo">Namma Kudla</h1>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+          <li><a href="blog.html">Blog</a></li>
+          <li><a href="destinations.html">Destinations</a></li>
+          <li><a href="guide.html">Guide Profile</a></li>
+          <li><a href="guides.html"> Travel Guide</a></li>
+           <li><a href="search.html">Search & Filter </a></li>
+          <li><a href="stories.html"> Travel Stories</a></li>
+          <li><a href="engage.html">Engage with Readers</a></li>
+          <li><a href="dashboard.html">Dashboard Overview</a></li>
+          <li><a href="admin.html">User Management</a></li>
+          <li><a href="content.html">Content Mangement</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Search and Filter Section -->
+  <section class="search-filter">
+    <h2>Search & Filter Posts</h2>
+    <input type="text" id="searchInput" placeholder="Search posts by keyword..." />
+
+    <div class="filter-buttons">
+      <button onclick="filterPosts('all')">All</button>
+      <button onclick="filterPosts('Beaches')">Beaches</button>
+      <button onclick="filterPosts('Temples')">Temples</button>
+      <button onclick="filterPosts('Food')">Food</button>
+      <button onclick="filterPosts('Culture')">Culture</button>
+    </div>
+  </section>
+
+  <!-- Blog Posts -->
+  <section id="blogPosts">
+    <article class="post-card" data-category="Beaches">
+      <h3>Sunset at Panambur Beach</h3>
+      <p>Golden sands and local snacks.</p>
+    </article>
+
+    <article class="post-card" data-category="Temples">
+      <h3>Kudla’s Temple Trails</h3>
+      <p>Spiritual roots and architecture.</p>
+    </article>
+
+    <article class="post-card" data-category="Food">
+      <h3>Top 5 Street Foods in Kudla</h3>
+      <p>Neer dosa, goli bajje, and more.</p>
+    </article>
+
+    <article class="post-card" data-category="Culture">
+      <h3>Festivals of Kudla</h3>
+      <p>Colors, music, and traditions that define the region.</p>
+    </article>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2025 Namma Kudla. All rights reserved.</p>
+  </footer>
+
+  <script>
+    // Search by keyword
+    document.getElementById("searchInput").addEventListener("input", function () {
+      const query = this.value.toLowerCase();
+      const posts = document.querySelectorAll("#blogPosts .post-card");
+
+      posts.forEach(post => {
+        const text = post.textContent.toLowerCase();
+        post.style.display = text.includes(query) ? "block" : "none";
+      });
+    });
+
+    // Filter by category
+    function filterPosts(category) {
+      const posts = document.querySelectorAll("#blogPosts .post-card");
+
+      posts.forEach(post => {
+        const postCategory = post.getAttribute("data-category");
+        post.style.display = category === "all" || postCategory === category ? "block" : "none";
+      });
+    }
+  </script>
+</body>
+</html>

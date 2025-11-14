@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Namma Kudla - Travel Stories</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <!-- Header -->
+  <header>
+    <nav class="navbar">
+      <h1 class="logo">Namma Kudla</h1>
+      <ul class="nav-links">
+         <li><a href="index.html">Home</a></li>
+          <li><a href="blog.html">Blog</a></li>
+          <li><a href="destinations.html">Destinations</a></li>
+          <li><a href="guide.html">Guide Profile</a></li>
+          <li><a href="guides.html"> Travel Guide</a></li>
+           <li><a href="search.html">Search & Filter </a></li>
+          <li><a href="stories.html"> Travel Stories</a></li>
+          <li><a href="engage.html">Engage with Readers</a></li>
+          <li><a href="dashboard.html">Dashboard Overview</a></li>
+          <li><a href="admin.html">User Management</a></li>
+          <li><a href="content.html">Content Mangement</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Travel Stories Intro -->
+  <section class="stories-intro">
+    <h2>Travel Stories from Kudla</h2>
+    <p>
+      Dive into heartfelt experiences and unforgettable adventures shared by travelers who explored the soul of Kudla. From serene beaches to vibrant festivals, these stories capture the essence of the journey.
+    </p>
+  </section>
+
+  <!-- Story Cards -->
+  <section class="story-list">
+    <article class="story-card">
+      <h3>My First Yakshagana Night</h3>
+      <p><strong>By:</strong> Ananya Rao</p>
+      <p>
+        I had never seen anything like it — the colors, the music, the drama. Sitting under the stars in a village square, I watched Kudla’s traditional theatre come alive. It was magical.
+      </p>
+      <a href="#">Read Full Story →</a>
+    </article>
+
+    <article class="story-card">
+      <h3>Lost and Found at Tannirbhavi</h3>
+      <p><strong>By:</strong> Rahul Menon</p>
+      <p>
+        A wrong turn led me to a quiet stretch of beach where I met a local fisherman who shared stories of the sea. That unexpected detour became the highlight of my trip.
+      </p>
+      <a href="#">Read Full Story →</a>
+    </article>
+
+    <article class="story-card">
+      <h3>Guest Story: A Culinary Trail</h3>
+      <p><strong>By:</strong> Guest Contributor - Priya S.</p>
+      <p>
+        From spicy fish curry to sweet banana buns, Kudla’s food scene is a feast for the senses. I followed my nose and taste buds through bustling markets and cozy eateries.
+      </p>
+      <a href="#">Read Full Story →</a>
+    </article>
+  </section>
+
+  <!-- Share Your Story -->
+  <section class="share-story section" aria-labelledby="share-title">
+    <h2 id="share-title">Share Your Kudla Experience</h2>
+    <p class="section-intro">Tell fellow travelers about your favourite moments — a short story goes a long way.</p>
+
+    <div class="share-container">
+      <form id="story-form" class="story-form" aria-label="Share your story">
+        <label class="sr-only" for="story-name">Your name</label>
+        <input id="story-name" name="name" type="text" placeholder="Your name" required />
+
+        <label class="sr-only" for="story-title">Story title</label>
+        <input id="story-title" name="title" type="text" placeholder="Story title" required />
+
+        <label class="sr-only" for="story-text">Your story</label>
+        <textarea id="story-text" name="story" placeholder="Write your travel story..." rows="6" required></textarea>
+
+        <div class="form-actions">
+          <button type="submit" class="btn-primary">Submit Story</button>
+        </div>
+      </form>
+
+      <aside class="share-preview">
+        <h3>Recent shared stories</h3>
+        <article class="shared-card">
+          <div class="shared-meta"><strong>Ananya Rao</strong> <span class="time">· 2 days ago</span></div>
+          <p class="shared-excerpt">I had never seen anything like it — the colors, the music, the drama. Sitting under the stars in a village square, I watched Kudla’s traditional theatre come alive.</p>
+          <a href="#" class="read-more">Read full story →</a>
+        </article>
+      </aside>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2025 Namma Kudla. All rights reserved.</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

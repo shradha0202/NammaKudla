@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Admin Dashboard - Namma Kudla</title>
+  <link rel="stylesheet" href="style.css" />
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+  <header>
+    <nav class="navbar">
+      <h1 class="logo">Admin Dashboard</h1>
+    </nav>
+  </header>
+
+  <section class="dashboard">
+    <h2>Overview</h2>
+
+    <!-- Metrics -->
+    <div class="metrics">
+      <div class="metric-card">
+        <h3>Total Users</h3>
+        <p id="totalUsers">1,245</p>
+      </div>
+      <div class="metric-card">
+        <h3>Recent Comments</h3>
+        <p id="recentComments">32</p>
+      </div>
+      <div class="metric-card">
+        <h3>Newsletter Subscribers</h3>
+        <p id="subscribers">580</p>
+      </div>
+    </div>
+
+    <!-- Chart -->
+    <div class="chart-container">
+      <canvas id="activityChart"></canvas>
+    </div>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 Namma Kudla. Admin Panel</p>
+  </footer>
+
+  <script>
+    const ctx = document.getElementById("activityChart").getContext("2d");
+    new Chart(ctx, {
+      type: "bar",
+      data: {
+        labels: ["Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun"],
+        datasets: [{
+          label: "User Activity",
+          data: [12, 19, 14, 17, 22, 30, 25],
+          backgroundColor: "rgba(54, 162, 235, 0.6)"
+        }]
+      },
+      options: {
+        responsive: true,
+        scales: {
+          y: { beginAtZero: true }
+        }
+      }
+    });
+  </script>
+</body>
+</html>

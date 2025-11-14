@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Engage with Namma Kudla</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header>
+    <nav class="navbar">
+      <h1 class="logo">Namma Kudla</h1>
+      <ul class="nav-links">
+       <li><a href="index.html">Home</a></li>
+          <li><a href="blog.html">Blog</a></li>
+          <li><a href="destinations.html">Destinations</a></li>
+          <li><a href="guide.html">Guide Profile</a></li>
+          <li><a href="guides.html"> Travel Guide</a></li>
+           <li><a href="search.html">Search & Filter </a></li>
+          <li><a href="stories.html"> Travel Stories</a></li>
+          <li><a href="engage.html">Engage with Readers</a></li>
+          <li><a href="dashboard.html">Dashboard Overview</a></li>
+          <li><a href="admin.html">User Management</a></li>
+          <li><a href="content.html">Content Mangement</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <section class="engage-section section" aria-labelledby="engage-title">
+    <h2 id="engage-title">Join the Conversation</h2>
+    <p class="section-intro">We love hearing from our readers — share your thoughts, stories, and feedback below.</p>
+
+    <div class="engage-grid">
+      <div class="engage-col">
+        <!-- Comment Form -->
+        <div class="card">
+          <h3>Post a Comment</h3>
+          <form id="comment-form" class="engage-form" aria-label="Post a comment">
+            <label class="sr-only" for="c-name">Your name</label>
+            <input id="c-name" name="name" type="text" placeholder="Your name" required />
+
+            <label class="sr-only" for="c-text">Your comment</label>
+            <textarea id="c-text" name="comment" placeholder="Write your comment..." rows="4" required></textarea>
+
+            <div class="form-actions">
+              <button type="submit" class="btn-primary">Post Comment</button>
+            </div>
+          </form>
+        </div>
+
+        <!-- Newsletter Signup -->
+        <div class="card">
+          <h3>Subscribe to Our Newsletter</h3>
+          <form id="newsletter-form" class="newsletter-form" aria-label="Subscribe to newsletter">
+            <label class="sr-only" for="n-email">Email</label>
+            <input id="n-email" name="email" type="email" placeholder="Your email" required />
+            <div class="form-actions">
+              <button type="submit" class="btn-primary">Subscribe</button>
+            </div>
+          </form>
+        </div>
+      </div>
+
+      <aside class="engage-col">
+        <!-- Social Sharing -->
+        <div class="card social-share">
+          <h3>Share Namma Kudla</h3>
+          <div class="share-buttons">
+            <button type="button" class="share-btn" data-platform="facebook"> Facebook</button>
+            <button type="button" class="share-btn" data-platform="twitter"> Twitter</button>
+            <button type="button" class="share-btn" data-platform="whatsapp"> WhatsApp</button>
+          </div>
+        </div>
+
+        <!-- Recent Comments preview -->
+        <div class="card recent-comments">
+          <h3>Recent Comments</h3>
+          <div class="comment-preview">
+            <div class="avatar">SR</div>
+            <div>
+              <strong>varsha</strong>
+              <div class="muted">Loved the Yakshagana piece — so vivid!</div>
+            </div>
+          </div>
+        </div>
+      </aside>
+    </div>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 Namma Kudla. All rights reserved.</p>
+  </footer>
+
+  <script>
+    // wire up the share buttons created dynamically
+    document.addEventListener('DOMContentLoaded', function () {
+      document.querySelectorAll('.share-btn').forEach(function (btn) {
+        btn.addEventListener('click', function () {
+          var platform = btn.getAttribute('data-platform') || 'social';
+          alert('Sharing on ' + platform + ' coming soon!');
+        });
+      });
+    });
+  </script>
+</body>
+</html>
