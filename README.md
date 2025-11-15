@@ -35,7 +35,7 @@ Namma Kudla is a handcrafted travel platform that celebrates the beauty, heritag
    Getting Started
 - Clone the repository
   
-git clone https://github.com/shradha0202/namma-kudla.git
+https://github.com/shradha0202/NammaKudla
 - 
 
 - Open index.html in your browser
