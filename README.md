@@ -27,6 +27,17 @@ Namma Kudla is a handcrafted travel platform that celebrates the beauty, heritag
 ├── script.js
 └── assets/
     └── images/
+           bhootha.png
+            food.png
+            hidden.png
+            kadri.png
+            kanthara.png
+            kudroli.png
+            manasa.png
+            mary.png
+            panab.png
+            yak.png
+            petals.png
   Design Philosophy
 - Inspired by South Indian traditions and Mangalore’s coastal charm
 - Elegant, symmetrical, and editorial-style layout
